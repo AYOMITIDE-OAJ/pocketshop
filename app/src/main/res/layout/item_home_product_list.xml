@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_control"
+    android:layout_marginBottom="@dimen/spacing_control"
+    android:background="@drawable/bg_shadow"
+    android:focusable="false"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_standard">
+
+    <RelativeLayout
+        android:id="@+id/rlImage"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            tools:src="@drawable/ic_product2" />
+
+        <TextView
+            android:id="@+id/tvSaleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_standard"
+            android:layout_marginTop="@dimen/spacing_standard"
+            android:background="@drawable/bg_ractangal"
+            android:backgroundTint="@color/red"
+            android:paddingStart="@dimen/spacing_standard"
+            android:paddingEnd="@dimen/spacing_standard"
+            android:text="@string/lbl_sales"
+            android:textColor="@color/common_white"
+            android:textSize="@dimen/font_size_micro"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard"
+        android:layout_marginTop="@dimen/spacing_control"
+        android:layout_marginEnd="@dimen/spacing_standard"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvProductWeight"
+            style="@style/WeightStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_micro" />
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_control_half"
+            android:maxLines="2"
+            android:minLines="2"
+            android:textAppearance="@style/FontMedium"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/font_size_small"
+            tools:text="Lemon" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_control"
+            android:layout_marginTop="@dimen/spacing_standard"
+            android:layout_marginBottom="@dimen/spacing_standard">
+
+            <TextView
+                android:id="@+id/tvOriginalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_micro"
+                android:visibility="visible"
+                android:layout_toEndOf="@+id/tvDiscountPrice"
+                tools:text="1000"
+                android:layout_marginStart="4dp"
+                android:paddingEnd="@dimen/_4sdp"/>
+
+            <TextView
+                android:id="@+id/tvDiscountPrice"
+                style="@style/PriceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:textAppearance="@style/FontSemiBold"
+                android:textSize="@dimen/font_size_normal"
+                tools:text="1000" />
+
+
+            <ImageView
+                android:id="@+id/tvAdd"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_button_add"
+                android:gravity="center_horizontal|center"
+                android:padding="@dimen/spacing_control"
+                android:src="@drawable/ic_shopping_cart"
+                android:tint="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

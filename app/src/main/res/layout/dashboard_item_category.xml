@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_middle"
+    app:cardCornerRadius="@dimen/spacing_middle">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivBackground"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/mViewBackground"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:alpha="0.6"
+            android:background="@color/green"
+            android:backgroundTint="@color/green" />
+
+        <TextView
+            android:paddingStart="@dimen/spacing_control"
+            android:paddingEnd="@dimen/spacing_control"
+            android:id="@+id/tvCategories"
+            style="@style/Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/lbl_Shipping"
+            android:maxLines="2"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

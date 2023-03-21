@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/rlMain"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivBackground"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_background"
+                        android:tint="@color/colorPrimary"
+                        app:layout_constraintDimensionRatio="H,0.45"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_below="@id/llMain"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_minus40sdp"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:background="@drawable/splash_img" />
+
+                <LinearLayout
+                    android:id="@+id/llMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginTop="@dimen/_70sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_create_account"
+                        android:textAppearance="@style/FontSemiBold"
+                        android:textColor="@color/common_white"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_shop_for_happiness"
+                        android:textAppearance="@style/FontMedium"
+                        android:textColor="@color/common_white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/spacing_standard_new"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:src="@drawable/ic_keyboard_backspace_black_24dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large">
+
+                <EditText
+                    android:id="@+id/edtFirstName"
+                    style="@style/EditTextStyle_rounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:layout_weight="1"
+                    android:autofillHints="@string/hint_first_name"
+                    android:hint="@string/hint_first_name"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/edtLastName"
+                    style="@style/EditTextStyle_rounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_control"
+                    android:layout_weight="1"
+                    android:autofillHints="@string/hint_last_name"
+                    android:hint="@string/hint_last_name"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtEmail"
+                style="@style/EditTextStyle_rounded"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:hint="@string/hint_Email" />
+
+            <EditText
+                android:id="@+id/edtUsername"
+                style="@style/EditTextStyle_rounded"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:hint="@string/hint_Username" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:background="@drawable/bg_ractangle_rounded_inactive">
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    style="@style/EditTextStyle_rounded"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_toStartOf="@id/ivPwd"
+                    android:background="@null"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword" />
+
+                <ImageView
+                    android:id="@+id/ivPwd"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:padding="@dimen/spacing_control"
+                    android:src="@drawable/ic_eye_line"
+                    android:tint="@color/textColorPrimary" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:background="@drawable/bg_ractangle_rounded_inactive">
+
+                <EditText
+                    android:id="@+id/edtConfirmPassword"
+                    style="@style/EditTextStyle_rounded"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_toStartOf="@id/ivConfirmPwd"
+                    android:background="@null"
+                    android:hint="@string/hint_confirm_password"
+                    android:inputType="textPassword" />
+
+                <ImageView
+                    android:id="@+id/ivConfirmPwd"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:padding="@dimen/spacing_control"
+                    android:src="@drawable/ic_eye_line"
+                    android:tint="@color/textColorPrimary" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btnSignUp"
+                style="@style/MaterialButton"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:elevation="@dimen/spacing_middle"
+                android:gravity="center_horizontal"
+                android:shadowColor="@color/colorPrimary"
+                android:text="@string/lbl_sign_up"
+                android:textAppearance="@style/FontSemiBold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:layout_marginBottom="@dimen/spacing_standard_new"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblAlreadyAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/lbl_already_have_account"
+                    android:textAppearance="@style/FontSemiBold"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/btnSignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_control"
+                    android:gravity="center"
+                    android:text="@string/lbl_sign_in_link"
+                    android:textAppearance="@style/FontSemiBold"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="@dimen/font_size_medium" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

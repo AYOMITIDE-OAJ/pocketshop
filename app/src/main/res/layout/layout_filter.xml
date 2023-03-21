@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:id="@+id/rlMain"
+    android:orientation="vertical"
+    android:background="@color/colorScreenBackground"
+    android:focusableInTouchMode="true"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/lblFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lbl_filter"
+            android:textAppearance="@style/FontBold"
+            android:textSize="@dimen/font_size_large"
+            android:textColor="@color/textColorPrimary"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/spacing_control"
+            android:contentDescription="@string/text_todo"
+            android:padding="@dimen/spacing_control"
+            android:tint="@color/textColorPrimary"
+            android:src="@drawable/ic_close_black" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_top_shadow">
+
+        <TextView
+            android:id="@+id/tvReset"
+            style="@style/BottomButton.White"
+            android:text="@string/lbl_reset" />
+
+        <TextView
+            android:id="@+id/tvApply"
+            style="@style/BottomButton.Primary"
+            android:text="@string/lbl_apply" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lay_button"
+        android:layout_below="@id/rl_head">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/spacing_standard"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/spacing_standard_new">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new">
+
+                <TextView
+                    android:id="@+id/tvHeading"
+                    style="@style/Heading"
+                    android:layout_width="match_parent"
+                    android:layout_toStartOf="@id/tvSelectAll"
+                    android:text="@string/lbl_attribute"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvSelectAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/lbl_select_all"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/font_size_small"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llAttributeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvAttributesName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorFilter"
+                android:gravity="center|start"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:paddingStart="@dimen/spacing_standard_new"
+                android:paddingEnd="@dimen/spacing_standard"
+                android:text="Price"
+                android:textColor="@color/common_white"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/spacing_standard"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/spacing_xmedium"
+                    android:text="Min"
+                    android:textColor="@color/textColorPrimary" />
+
+                <com.oajstudios.pocketshop.utils.rangeBar.RangeBar
+                    android:id="@+id/rangebar1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_control"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginEnd="@dimen/spacing_control"
+                    android:layout_weight="1"
+                    app:mrb_barWeight="@dimen/_8sdp"
+                    app:mrb_connectingLineWeight="@dimen/_7sdp"
+                    app:mrb_pinTextColor="@color/white"
+                    app:mrb_connectingLineColor="@color/track_green"
+                    app:mrb_rangeBar="true"
+                    app:mrb_rangeBarColor="@color/checkbox_color"
+                    app:mrb_rangeBar_rounded="true"
+                    app:mrb_selectorBoundaryColor="@color/white"
+                    app:mrb_selectorSize="@dimen/_5sdp"
+                    app:mrb_temporaryPins="true"
+                    app:mrb_tickDefaultColor="@android:color/transparent"
+                    app:mrb_tickLabelColor="@android:color/transparent"
+                    app:mrb_tickLabelSelectedColor="@color/textColorPrimary"
+                    app:mrb_tickLabelSize="7sp" />
+
+                <TextView
+                    android:id="@+id/lblMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/spacing_xmedium"
+                    android:text="Max"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_small" />
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvBrands"
+                style="@style/RecycleView"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_standard"
+                android:nestedScrollingEnabled="true"
+                android:paddingStart="@dimen/spacing_standard_new"
+                android:paddingEnd="@dimen/spacing_standard_new" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

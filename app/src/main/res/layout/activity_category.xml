@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/llMain"
+    android:background="@color/colorScreenBackground"
+    tools:context="com.oajstudios.pocketshop.activity.CategoryActivity">
+
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNewestProduct"
+        style="@style/RecycleView"
+        android:layout_marginStart="@dimen/spacing_control"
+        android:layout_marginEnd="@dimen/spacing_control"
+        android:paddingTop="@dimen/spacing_standard_new"
+        android:paddingBottom="@dimen/spacing_standard"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>

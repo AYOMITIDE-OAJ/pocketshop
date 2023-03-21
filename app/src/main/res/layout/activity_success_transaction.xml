@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlMain"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/spacing_standard"
+        android:layout_marginTop="@dimen/spacing_standard"
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:tint="@color/black">
+
+    </ImageView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imgBack">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_16sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ic_circle_success"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_check"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/lblOrderPlaceSuccessfully"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/lbl_oder_placed_successfully"
+                        android:textAppearance="@style/FontSemiBold"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/font_size_large"
+                        tools:ignore="MissingPrefix" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/lblTotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:text="@string/lbl_total_amount"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/font_size_small"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:textAppearance="@style/FontSemiBold"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_normal"
+                    tools:ignore="MissingPrefix" />
+
+
+                <TextView
+                    android:id="@+id/lblOrderId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:text="@string/lbl_order_id"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/font_size_small"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/orderId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:textAppearance="@style/FontSemiBold"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_normal"
+                    tools:ignore="MissingPrefix" />
+
+
+                <TextView
+                    android:id="@+id/lblPaymentThrough"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:text="@string/lbl_payment_through"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/font_size_small"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/paidVia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:textAppearance="@style/FontSemiBold"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_normal"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/lblTransactionFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:text="@string/lbl_transaction_date"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/font_size_small"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/transactionDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:layout_marginBottom="@dimen/spacing_standard_new"
+                    android:textAppearance="@style/FontSemiBold"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_normal"
+                    tools:ignore="MissingPrefix" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tvDone"
+                    style="@style/MaterialButtonStyle.Filled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_standard_new"
+                    android:text="@string/lbl_done" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

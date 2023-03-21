@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorScreenBackground"
+    android:orientation="vertical"
+    android:id="@+id/llMain"
+    tools:context=".activity.ReviewsActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/reviewView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvLblRatings"
+                        style="@style/Heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:layout_toStartOf="@id/btnRateNow"
+                        android:text="@string/lbl_ratings" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRateNow"
+                        style="@style/MaterialButtonStyle.Stroked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:paddingStart="@dimen/spacing_standard"
+                        android:paddingEnd="@dimen/spacing_standard"
+                        android:text="@string/lbl_rate_now"
+                        android:textAppearance="@style/FontSemiBold"
+                        android:textColor="@color/PrimaryHeadingColor"
+                        android:textSize="@dimen/font_size_small"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle">
+
+                    <RelativeLayout
+                        android:id="@+id/rlReviewInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_standard_new"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        android:layout_marginEnd="@dimen/spacing_standard">
+
+                        <ImageView
+                            android:id="@+id/ivBackground"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_90sdp"
+                            android:background="@drawable/bg_circle"
+                            android:contentDescription="@string/text_todo" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvReviewRate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableEnd="@drawable/ic_star_black"
+                                android:drawablePadding="@dimen/spacing_control"
+                                android:text="0"
+                                android:textAppearance="@style/FontSemiBold"
+                                android:textColor="@color/textColorPrimary"
+                                android:textSize="@dimen/font_size_normal" />
+
+                            <TextView
+                                android:id="@+id/tvTotalReview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.0"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="@dimen/font_size_small" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/spacing_standard_new"
+                        android:layout_toEndOf="@id/rlReviewInfo"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_standard"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvLbl5"
+                                style="@style/RatingText"
+                                android:gravity="start"
+                                android:text="@string/lbl_5" />
+
+                            <SeekBar
+                                android:id="@+id/sb5Star"
+                                style="@style/RatingSeekBar"
+                                android:layout_toStartOf="@id/tv5Count"
+                                android:layout_toEndOf="@id/tvLbl5"
+                                android:enabled="false"
+                                android:progressDrawable="@drawable/bg_seekbar_green" />
+
+                            <TextView
+                                android:id="@+id/tv5Count"
+                                style="@style/RatingSubText" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_control"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tvLbl4"
+                                style="@style/RatingText"
+                                android:text="@string/lbl_4" />
+
+                            <SeekBar
+                                android:id="@+id/sb4Star"
+                                style="@style/RatingSeekBar"
+                                android:layout_toStartOf="@id/tv4Count"
+                                android:layout_toEndOf="@id/tvLbl4"
+                                android:progressDrawable="@drawable/bg_seekbar_green" />
+
+                            <TextView
+                                android:id="@+id/tv4Count"
+                                style="@style/RatingSubText" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_control"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tvLbl3"
+                                style="@style/RatingText"
+                                android:text="@string/lbl_3" />
+
+                            <SeekBar
+                                android:id="@+id/sb3Star"
+                                style="@style/RatingSeekBar"
+                                android:layout_toStartOf="@id/tv3Count"
+                                android:layout_toEndOf="@id/tvLbl3"
+                                android:progressDrawable="@drawable/bg_seekbar_yellow" />
+
+                            <TextView
+                                android:id="@+id/tv3Count"
+                                style="@style/RatingSubText" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_control"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tvLbl2"
+                                style="@style/RatingText"
+                                android:text="@string/lbl_2" />
+
+                            <SeekBar
+                                android:id="@+id/sb2Star"
+                                style="@style/RatingSeekBar"
+                                android:layout_toStartOf="@id/tv2Count"
+                                android:layout_toEndOf="@id/tvLbl2"
+                                android:progressDrawable="@drawable/bg_seekbar_yellow" />
+
+                            <TextView
+                                android:id="@+id/tv2Count"
+                                style="@style/RatingSubText" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_control"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tvLbl1"
+                                style="@style/RatingText"
+                                android:text="@string/lbl_1" />
+
+                            <SeekBar
+                                android:id="@+id/sb1Star"
+                                style="@style/RatingSeekBar"
+                                android:layout_toStartOf="@id/tv1Count"
+                                android:layout_toEndOf="@id/tvLbl1"
+                                android:progressDrawable="@drawable/bg_seekbar_red" />
+
+                            <TextView
+                                android:id="@+id/tv1Count"
+                                style="@style/RatingSubText" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:background="@color/view_color" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLblReview"
+                style="@style/Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:text="@string/lbl_reviews" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReview"
+                style="@style/RecycleView"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="@dimen/_28sdp" />
+
+            <include layout="@layout/layout_nodata" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

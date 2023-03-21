@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llSubCategory"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_standard_new"
+    android:layout_marginBottom="@dimen/spacing_standard_new"
+    android:background="@drawable/bg_subcategory"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/spacing_standard"
+    android:paddingTop="@dimen/spacing_standard"
+    android:paddingEnd="@dimen/spacing_standard"
+    android:paddingBottom="@dimen/spacing_standard">
+
+    <ImageView
+        android:id="@+id/ivProducts"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/spacing_standard_new"
+        android:gravity="center_vertical"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tvSubCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/FontBold"
+        android:textColor="@color/tomato"
+        android:textSize="@dimen/font_size_small" />
+
+</LinearLayout>

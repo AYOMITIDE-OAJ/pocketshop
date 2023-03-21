@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/spacing_standard_new"
+    android:paddingEnd="@dimen/spacing_standard_new"
+    android:id="@+id/rlMain"
+    android:paddingTop="@dimen/_20sdp"
+    android:paddingBottom="@dimen/_20sdp"
+    android:background="@drawable/bg_dashboard_search">
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/spacing_standard_new"
+        android:paddingEnd="@dimen/spacing_standard_new"
+        android:textColor="@color/textColorPrimary"
+        android:background="@drawable/bg_search_edittext"
+        android:backgroundTint="@color/editText_background"
+        android:paddingTop="@dimen/_14sdp"
+        android:drawablePadding="@dimen/spacing_standard_new"
+        android:drawableStart="@drawable/ic_search"
+        android:drawableTint="@color/textColorPrimary"
+        android:paddingBottom="@dimen/_14sdp"
+        android:hint="@string/action_search" />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_standard"
+    android:background="@color/colorScreenBackground"
+    android:orientation="vertical"
+    android:id="@+id/llMainOrder"
+    android:padding="@dimen/spacing_standard_new">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_cancel_msg"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/font_size_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_standard"
+        android:background="@drawable/bg_edittext"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/spinner_new" />
+
+    </LinearLayout>
+
+</LinearLayout>

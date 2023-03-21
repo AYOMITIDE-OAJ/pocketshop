@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="MissingPrefix">
+
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lay_button"
+        android:layout_below="@id/toolbar_lay"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_30sdp">
+
+            <LinearLayout
+                android:id="@+id/llAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAddressHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_shipping_address"
+                    android:textAppearance="@style/FontSemiBold"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <TextView
+                    android:id="@+id/tvUserAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/tvMethod"
+                    style="@style/Heading"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:text="Method Applied"
+                    android:textColor="@color/textColorSecondary"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvMethodName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/tvChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_change"
+                    android:textAppearance="@style/FontSemiBold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_size_medium"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:id="@+id/llBilling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblBillingAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_Billing_address"
+                    android:textAppearance="@style/FontSemiBold"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_normal" />
+
+
+                <TextView
+                    android:id="@+id/tvBillingAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/font_size_medium" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:id="@+id/paymentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/lblPaymentMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:layout_marginBottom="@dimen/spacing_middle"
+                    android:text="@string/lbl_payment_methods"
+                    android:textAppearance="@style/FontSemiBold"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:layout_marginBottom="@dimen/spacing_standard"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_standard">
+
+                    <RadioButton
+                        android:id="@+id/rbCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:paddingStart="@dimen/spacing_standard"
+                        android:paddingEnd="@dimen/spacing_standard"
+                        android:text="@string/lbl_pay_with_debit_credit_card"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/font_size_medium"
+                        android:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/rbRazorpay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/spacing_standard"
+                        android:paddingEnd="@dimen/spacing_standard"
+                        android:text="@string/lbl_net_banking"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/font_size_medium"
+                        android:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/rbCOD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/spacing_standard"
+                        android:paddingEnd="@dimen/spacing_standard"
+                        android:text="@string/lbl_cash_on_delivery"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/font_size_medium"
+                        android:visibility="visible" />
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5sdp"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/lay_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_top_shadow"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_middle"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_control">
+
+            <TextView
+                android:id="@+id/lblSubTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_total_mrp"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMRPDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_control">
+
+            <TextView
+                android:id="@+id/lblDiscountTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_discount_on_mrp"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/tvDiscountMRPTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_control"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtDiscountlbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_discount"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llShippingAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_control"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtShippinglbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_Shipping"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/tvShipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/spacing_control"
+            android:layout_marginBottom="@dimen/spacing_control"
+            android:background="@color/view_color" />
+
+        <LinearLayout
+            android:id="@+id/llSeePriceDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_control">
+
+            <TextView
+                android:id="@+id/lblTotalAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_total_amount_"
+                android:textAppearance="@style/FontSemiBold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/tvTotalCartAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/FontSemiBold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/font_size_medium"
+                tools:ignore="MissingPrefix" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvContinue"
+            style="@style/MaterialButtonStyle.Filled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_control"
+            android:text="@string/lbl_checkout"
+            app:cornerRadius="@dimen/spacing_control" />
+    </LinearLayout>
+
+</RelativeLayout>

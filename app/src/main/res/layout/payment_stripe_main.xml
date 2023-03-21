@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/paymentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorPrimaryLight">
+
+            <TextView
+                android:id="@+id/lblAmountPayable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:text="@string/lbl_amount_payable"
+                android:textAppearance="@style/FontSemiBold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/font_size_large" />
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:textAppearance="@style/FontSemiBold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/font_size_large" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/lblCardDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_standard_new"
+            android:text="@string/lbl_enter_card_details"
+            android:textAppearance="@style/FontSemiBold"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/font_size_normal" />
+
+        <com.stripe.android.view.CardInputWidget
+            android:id="@+id/cardInputWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_standard"
+            android:padding="@dimen/spacing_standard" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvPay"
+            style="@style/MaterialButtonStyle.Filled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_standard_new"
+            android:text="@string/lbl_pay"
+            android:backgroundTint="@color/colorAccent"
+            app:cornerRadius="@dimen/spacing_standard" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createOrderView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtPaymentMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_standard_new"
+            android:gravity="center"
+            android:text="@string/lbl_payment_successfully_we_are_placing_your_order"
+            android:textAppearance="@style/FontSemiBold"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/font_size_large"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/lblTransactionId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_standard_new"
+            android:layout_marginTop="@dimen/spacing_standard_new"
+            android:layout_marginEnd="@dimen/spacing_standard_new"
+            android:text="@string/lbl_transaction_id"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/font_size_small"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/transactionId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_standard_new"
+            android:layout_marginEnd="@dimen/spacing_standard_new"
+            android:textAppearance="@style/FontSemiBold"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/font_size_large"
+            tools:ignore="MissingPrefix" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvOrderAgain"
+            style="@style/MaterialButtonStyle.Filled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_standard"
+            android:layout_marginTop="@dimen/spacing_control"
+            android:text="@string/lbl_order_again"
+            android:visibility="gone"
+            app:cornerRadius="@dimen/spacing_control" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_middle"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/viewCircle"
+        android:layout_width="@dimen/_8sdp"
+        android:layout_height="@dimen/_8sdp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/circle_white" />
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/tvCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_control"
+        android:padding="@dimen/spacing_control"
+        android:text="@string/lbl_Shipping"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/font_size_medium" />
+</LinearLayout>

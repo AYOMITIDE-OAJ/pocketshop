@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlItem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_shadow"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/cardImg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp">
+
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_125sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_product2" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardImg"
+        android:maxLines="2"
+        android:minLines="2"
+        android:paddingStart="@dimen/spacing_standard"
+        android:layout_marginTop="@dimen/spacing_standard"
+        android:layout_marginBottom="@dimen/spacing_standard"
+        android:paddingEnd="@dimen/spacing_standard"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/font_size_medium" />
+
+    <LinearLayout
+        android:id="@+id/llPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toStartOf="@id/ivMoveToCart"
+        android:layout_below="@id/tvProductName"
+        android:layout_marginStart="@dimen/spacing_control"
+        android:layout_marginEnd="@dimen/spacing_control"
+        android:layout_marginBottom="@dimen/spacing_standard">
+
+        <TextView
+            android:id="@+id/tvDiscountPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:singleLine="true"
+            android:textColor="@color/PrimaryHeadingColor"
+            android:textSize="@dimen/font_size_small" />
+
+        <TextView
+            android:id="@+id/tvOriginalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/font_size_small" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivMoveToCart"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_below="@id/tvProductName"
+        android:layout_alignEnd="@id/cardImg"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/spacing_control"
+        android:layout_marginEnd="@dimen/spacing_standard"
+        android:layout_marginBottom="@dimen/spacing_standard"
+        android:src="@drawable/ic_shopping_cart" />
+</RelativeLayout>
+
+

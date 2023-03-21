@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#ff9c71</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">#654062</color>
+
+    <color name="menuIconColor">@color/colorAccent</color>
+
+    <color name="splashBackground">#ffffff</color>
+
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="colorPrimaryLight">#41654062</color>
+    <color name="white">#ffffff</color>
+    <color name="semi_white">#F8F7F7</color>
+    <color name="black">#000000</color>
+    <color name="view_color">#eaeaea</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorScreenBackground">#F6F7FA</color>
+    <!--Drawable Color-->
+    <color name="commonDrawableColor">#ffffff</color>
+    <color name="colorBackArrow">@color/colorAccent</color>
+    <color name="colorDrawerView">@color/commonDrawableColor</color>
+    <color name="colorDrawableSearch">@color/commonDrawableColor</color>
+    <color name="colorDrawableCart">@color/commonDrawableColor</color>
+
+    <color name="PrimaryHeadingColor">#ff9c71</color>
+
+    <!--App Theme Background Color-->
+    <color name="colorToolBarBackground">@color/colorPrimaryDark</color>
+    <!--Title bar color-->
+    <color name="colorTitleBarText">#ffffff</color>
+
+    <color name="editText_background">#F1F1F1</color>
+    <color name="tomato">#ff9c71</color>
+    <color name="dots_color">#A5A5A5</color>
+    <color name="editText_background_active">#FDE9DA</color>
+    <color name="favourite_unselected_background">#ECECEC</color>
+    <color name="yellow">#FEBA39</color>
+    <color name="light_gray">#ECECEC</color>
+    <color name="light_gray_date">#D6D5D5</color>
+    <color name="green">#66953A</color>
+    <color name="red">#F61929</color>
+    <color name="item_background">#EFF3F6</color>
+    <color name="checkbox_color">#DFDFDF</color>
+    <color name="itemText_background">#F8F8F8</color>
+    <color name="track_green">#64B931</color>
+    <color name="track_yellow">#ECC134</color>
+    <color name="track_grey">#D3D3D3</color>
+    <color name="radiobuttonTint">#4353FA</color>
+    <color name="scratch_start_gradient">#e5e5e5</color>
+    <color name="scratch_end_gradient">#cccccc</color>
+    <color name="background_grey">#DFDFDF</color>
+    <color name="line_color">#F3F3F3</color>
+
+    <color name="demo_light_transparent">#16000000</color>
+    <color name="default_shimmer_color">#e3e1e3</color>
+
+    <color name="common_white">#ffffff</color>
+    <color name="common_black">#212121</color>
+
+    <color name="cat_1">@color/colorAccent</color>
+    <color name="cat_2">#34B5C8</color>
+    <color name="cat_3">#FED76D</color>
+    <color name="cat_4">#0C5A93</color>
+    <color name="cat_5">#0C3A6A</color>
+    <color name="cat_6">#4D84B1</color>
+    <color name="cat_7">#3CA69B</color>
+    <color name="cat_8">#D95362</color>
+
+    <color name="cardBackground">#FFF</color>
+
+    <color name="faceBooK_blue">#343B9D</color>
+    <color name="google_red">#CB3634</color>
+
+    <color name="colorFilter">#654062</color>
+
+    <array name="categoryColor">
+        <item>@color/cat_1</item>
+        <item>@color/cat_2</item>
+        <item>@color/cat_3</item>
+        <item>@color/cat_4</item>
+        <item>@color/cat_7</item>
+        <item>@color/cat_8</item>
+    </array>
+
+</resources>

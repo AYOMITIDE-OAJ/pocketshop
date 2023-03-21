@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorScreenBackground"
+    android:orientation="vertical"
+    tools:context=".activity.EditProfileActivity">
+
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_lay"
+        android:background="@color/colorScreenBackground"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/cards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_middle"
+                        android:layout_marginTop="@dimen/_60sdp"
+                        android:layout_marginEnd="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_standard"
+                        android:background="@drawable/bg_shadow"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/spacing_standard_new"
+                        android:paddingTop="@dimen/_30sdp"
+                        android:paddingEnd="@dimen/spacing_standard_new"
+                        android:paddingBottom="@dimen/spacing_standard_new">
+
+
+                        <TextView
+                            android:id="@+id/tvUserName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_30sdp"
+                            android:gravity="center"
+                            android:textAppearance="@style/FontSemiBold"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/font_size_xlarge" />
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="@dimen/spacing_standard_new"
+                            android:layout_marginTop="@dimen/spacing_control_half"
+                            android:layout_marginEnd="@dimen/spacing_standard_new"
+                            android:layout_marginBottom="@dimen/spacing_control"
+                            android:gravity="center"
+                            android:textAppearance="@style/FontSemiBold"
+                            android:textColor="@color/PrimaryHeadingColor"
+                            android:textSize="@dimen/font_size_medium" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginTop="@dimen/spacing_standard_new"
+                            android:background="@color/view_color"
+                            android:visibility="gone" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/spacing_standard_new"
+                            android:paddingBottom="@dimen/spacing_standard_new"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/llOrder"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvOrderCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:textAppearance="@style/FontSemiBold"
+                                    android:textColor="?attr/colorPrimary"
+                                    android:textSize="@dimen/font_size_normal" />
+
+                                <TextView
+                                    android:id="@+id/lblOrder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/lbl_orders"
+                                    android:textAppearance="@style/FontMedium"
+                                    android:textColor="@color/textColorPrimary"
+                                    android:textSize="@dimen/font_size_medium" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llWishList"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvCountWishList"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:textAppearance="@style/FontSemiBold"
+                                    android:textColor="?attr/colorPrimary"
+                                    android:textSize="@dimen/font_size_normal" />
+
+                                <TextView
+                                    android:id="@+id/lblWishList"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/lbl_wish_list"
+                                    android:textAppearance="@style/FontMedium"
+                                    android:textColor="@color/textColorPrimary"
+                                    android:textSize="@dimen/font_size_medium" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_middle"
+                        android:layout_marginEnd="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_middle"
+                        android:background="@drawable/bg_shadow"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_standard_new">
+
+                        <TextView
+                            android:id="@+id/lblPersonal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_standard"
+                            android:layout_marginEnd="@dimen/spacing_standard"
+                            android:text="@string/lbl_personal"
+                            android:textAppearance="@style/FontSemiBold"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_standard_new">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edtFirstName"
+                                    style="@style/EditTextStyle_profile"
+                                    android:hint="@string/hint_first_name" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_margin="@dimen/spacing_standard"
+                                    android:background="@color/view_color"
+                                    android:paddingStart="@dimen/spacing_standard"
+                                    android:paddingEnd="@dimen/spacing_standard" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edtLastName"
+                                    style="@style/EditTextStyle_profile"
+                                    android:hint="@string/hint_last_name" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_margin="@dimen/spacing_standard"
+                                    android:background="@color/view_color"
+                                    android:paddingStart="@dimen/spacing_standard"
+                                    android:paddingEnd="@dimen/spacing_standard" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/edtEmail"
+                            style="@style/EditTextStyle_profile"
+                            android:layout_marginBottom="@dimen/spacing_standard"
+                            android:hint="@string/hint_email" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_middle"
+                        android:layout_marginEnd="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_middle"
+                        android:background="@drawable/bg_shadow"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_standard_new">
+
+                        <TextView
+                            android:id="@+id/lblBilling"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_standard"
+                            android:layout_marginEnd="@dimen/spacing_standard"
+                            android:text="@string/lbl_Billing"
+                            android:textAppearance="@style/FontSemiBold"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_standard_new">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edtBillingFName"
+                                    style="@style/EditTextStyle_profile"
+                                    android:hint="@string/hint_first_name" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_margin="@dimen/spacing_standard"
+                                    android:background="@color/view_color"
+                                    android:paddingStart="@dimen/spacing_standard"
+                                    android:paddingEnd="@dimen/spacing_standard" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edtBillingLName"
+                                    style="@style/EditTextStyle_profile"
+                                    android:hint="@string/hint_last_name" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_margin="@dimen/spacing_standard"
+                                    android:background="@color/view_color"
+                                    android:paddingStart="@dimen/spacing_standard"
+                                    android:paddingEnd="@dimen/spacing_standard" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/edtBillingCompany"
+                            style="@style/EditTextStyle_profile"
+                            android:hint="@string/hint_company" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_margin="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+
+                        <EditText
+                            android:id="@+id/edtBillingAdd1"
+                            style="@style/EditTextStyle_profile"
+                            android:layout_marginBottom="@dimen/spacing_standard"
+                            android:hint="@string/hint_add1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_margin="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+
+                        <EditText
+                            android:id="@+id/edtBillingAdd2"
+                            style="@style/EditTextStyle_profile"
+                            android:layout_marginBottom="@dimen/spacing_standard"
+                            android:hint="@string/hint_add2" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_margin="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edtBillingCity"
+                                    style="@style/EditTextStyle_profile"
+                                    android:hint="@string/hint_city"
+                                    android:nextFocusDown="@id/edtBillingPinCode" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_margin="@dimen/spacing_standard"
+                                    android:background="@color/view_color"
+                                    android:paddingStart="@dimen/spacing_standard"
+                                    android:paddingEnd="@dimen/spacing_standard" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edtBillingPinCode"
+                                    style="@style/EditTextStyle_profile"
+                                    android:hint="@string/hint_pin_code"
+                                    android:inputType="number" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_margin="@dimen/spacing_standard"
+                                    android:background="@color/view_color"
+                                    android:paddingStart="@dimen/spacing_standard"
+                                    android:paddingEnd="@dimen/spacing_standard" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spBillingCountry"
+                            style="@style/spinner_new" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginStart="@dimen/spacing_standard"
+                            android:layout_marginEnd="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+
+                        <Spinner
+                            android:id="@+id/spBillingState"
+                            style="@style/spinner_new"
+                            android:layout_marginBottom="@dimen/spacing_standard" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginStart="@dimen/spacing_standard"
+                            android:layout_marginEnd="@dimen/spacing_standard"
+                            android:layout_marginBottom="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+
+                        <EditText
+                            android:id="@+id/edtBillingPhone"
+                            style="@style/EditTextStyle_profile"
+                            android:layout_marginBottom="@dimen/spacing_standard"
+                            android:hint="@string/hint_contact"
+                            android:inputType="number" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_margin="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+
+                        <EditText
+                            android:id="@+id/edtBillingEmail"
+                            style="@style/EditTextStyle_profile"
+                            android:layout_marginBottom="@dimen/spacing_standard"
+                            android:hint="@string/hint_email" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_middle"
+                        android:layout_marginEnd="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_middle"
+                        android:background="@drawable/bg_shadow"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_standard_new">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_standard"
+                            android:layout_marginEnd="@dimen/spacing_standard">
+
+                            <TextView
+                                android:id="@+id/lblShipping"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/lbl_Shipping"
+                                android:textAppearance="@style/FontSemiBold"
+                                android:textColor="@color/textColorPrimary"
+                                android:textSize="@dimen/font_size_normal" />
+
+                            <CheckBox
+                                android:id="@+id/cbCheck"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:buttonTint="@color/textColorSecondary"
+                                android:layoutDirection="rtl"
+                                android:text="@string/lbl_same"
+                                android:textColor="@color/textColorSecondary"
+                                android:textSize="@dimen/font_size_medium" />
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_standard_new">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edtShippingFName"
+                                    style="@style/EditTextStyle_profile"
+                                    android:hint="@string/hint_first_name" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_margin="@dimen/spacing_standard"
+                                    android:background="@color/view_color"
+                                    android:paddingStart="@dimen/spacing_standard"
+                                    android:paddingEnd="@dimen/spacing_standard" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edtShippingLName"
+                                    style="@style/EditTextStyle_profile"
+                                    android:hint="@string/hint_last_name" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_margin="@dimen/spacing_standard"
+                                    android:background="@color/view_color"
+                                    android:paddingStart="@dimen/spacing_standard"
+                                    android:paddingEnd="@dimen/spacing_standard" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/edtShippingCompany"
+                            style="@style/EditTextStyle_profile"
+                            android:hint="@string/hint_company" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_margin="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+
+                        <EditText
+                            android:id="@+id/edtShippingAdd1"
+                            style="@style/EditTextStyle_profile"
+                            android:layout_marginBottom="@dimen/spacing_standard"
+                            android:hint="@string/hint_add1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_margin="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+
+                        <EditText
+                            android:id="@+id/edtShippingAdd2"
+                            style="@style/EditTextStyle_profile"
+                            android:layout_marginBottom="@dimen/spacing_standard"
+                            android:hint="@string/hint_add2" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_margin="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edtShippingCity"
+                                    style="@style/EditTextStyle_profile"
+                                    android:hint="@string/hint_city"
+                                    android:nextFocusDown="@id/edtShippingPinCode" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_margin="@dimen/spacing_standard"
+                                    android:background="@color/view_color"
+                                    android:paddingStart="@dimen/spacing_standard"
+                                    android:paddingEnd="@dimen/spacing_standard" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/edtShippingPinCode"
+                                    style="@style/EditTextStyle_profile"
+                                    android:hint="@string/hint_pin_code"
+                                    android:inputType="number" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_margin="@dimen/spacing_standard"
+                                    android:background="@color/view_color"
+                                    android:paddingStart="@dimen/spacing_standard"
+                                    android:paddingEnd="@dimen/spacing_standard" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spCountry"
+                            style="@style/spinner_new" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginStart="@dimen/spacing_standard"
+                            android:layout_marginEnd="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+
+                        <Spinner
+                            android:id="@+id/spState"
+                            style="@style/spinner_new"
+                            android:layout_marginBottom="@dimen/spacing_standard" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginStart="@dimen/spacing_standard"
+                            android:layout_marginEnd="@dimen/spacing_standard"
+                            android:background="@color/view_color"
+                            android:paddingStart="@dimen/spacing_standard"
+                            android:paddingEnd="@dimen/spacing_standard" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSaveProFile"
+                        style="@style/MaterialButtonStyle.Filled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_standard_new"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/spacing_standard_new"
+                        android:layout_marginBottom="@dimen/spacing_standard"
+                        android:text="@string/lbl_save_profile"
+                        app:cornerRadius="@dimen/spacing_control" />
+
+                </LinearLayout>
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/editProfileImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    app:layout_anchor="@id/cards"
+                    app:layout_anchorGravity="top|center">
+
+                    <com.oajstudios.pocketshop.utils.CircleImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_avatar"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="@dimen/spacing_control" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@drawable/circle_white"
+                        android:contentDescription="@string/text_todo"
+                        android:padding="@dimen/_6sdp"
+                        android:src="@drawable/ic_camera"
+                        android:tint="@color/PrimaryHeadingColor"
+                        app:layout_anchor="@id/ivProfile"
+                        app:layout_anchorGravity="end|bottom" />
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

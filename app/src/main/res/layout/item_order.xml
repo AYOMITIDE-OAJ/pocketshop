@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_standard_new">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_alignBottom="@id/rl_content"
+        android:elevation="0dp"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="@dimen/_6sdp">
+
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/text_todo"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_product2" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/card"
+        android:paddingStart="@dimen/spacing_standard_new"
+        android:paddingEnd="@dimen/spacing_control">
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_standard"
+            android:layout_marginBottom="@dimen/spacing_control"
+            android:maxLines="2"
+            android:textAppearance="@style/FontSemiBold"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/font_size_medium"
+            tools:ignore="MissingPrefix" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductName"
+            android:layout_marginTop="@dimen/spacing_control"
+            android:paddingBottom="@dimen/spacing_standard">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_499"
+                android:textAppearance="@style/FontMedium"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_size_normal"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:id="@+id/tvOriginalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/spacing_control"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_small"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+

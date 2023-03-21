@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_standard_new"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/spacing_standard"
+    android:paddingEnd="@dimen/spacing_standard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCouponName"
+            style="@style/Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imgShare"
+            android:text="@string/lbl_orders" />
+
+        <ImageView
+            android:id="@+id/imgShare"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/spacing_standard"
+            android:src="@drawable/ic_share_black_24dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:lineSpacingExtra="@dimen/spacing_control_half"
+        android:text="@string/app_name"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="@dimen/font_size_medium" />
+
+    <TextView
+        android:id="@+id/tvMinAmountInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:lineSpacingExtra="@dimen/spacing_control_half"
+        android:text="@string/app_name"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="@dimen/font_size_micro" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_standard">
+
+        <TextView
+            android:id="@+id/tvCouponOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_square_dotted"
+            android:paddingStart="@dimen/spacing_standard"
+            android:paddingTop="@dimen/spacing_control_half"
+            android:paddingEnd="@dimen/spacing_standard"
+            android:paddingBottom="@dimen/spacing_control_half"
+            android:text="@string/app_name"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font_size_medium" />
+
+        <TextView
+            android:id="@+id/lblValidTill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/spacing_standard"
+            android:layout_toEndOf="@+id/tvCouponOffer"
+            android:lineSpacingExtra="@dimen/spacing_control_half"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/font_size_micro" />
+
+        <TextView
+            android:id="@+id/tvApply"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_horizontal|center"
+            android:padding="@dimen/spacing_xmedium"
+            android:text="@string/lbl_apply"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font_size_medium" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_standard"
+        android:background="@color/light_gray" />
+</LinearLayout>

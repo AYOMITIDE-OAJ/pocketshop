@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "814757719860",
+    "project_id": "pocketshop-f74b5",
+    "storage_bucket": "pocketshop-f74b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814757719860:android:5571022ea0cfc6e86b3f61",
+        "android_client_info": {
+          "package_name": "com.oajstudios.pocketshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814757719860-a1k53ucjb5ds59hh31v2jli53ovj86jq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oajstudios.pocketshop",
+            "certificate_hash": "9d0dc5af5000f459cbf3493ff1d52f409db7769d"
+          }
+        },
+        {
+          "client_id": "814757719860-a0l7q7cd740jhkllnf12e7e3h5l9a20a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCvecnkpzTvPOSW7Qxzq72RRmQJSJvQEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814757719860-a0l7q7cd740jhkllnf12e7e3h5l9a20a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

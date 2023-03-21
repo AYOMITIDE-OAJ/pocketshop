@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.oajstudios.pocketshop.utils.LineView
+            android:id="@+id/ivLine"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerHorizontal="true"
+            app:line_color="@color/colorPrimary" />
+
+        <com.oajstudios.pocketshop.utils.CircleView
+            android:id="@+id/ivCircle"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:circle_gravity="top"
+            app:color="@color/colorPrimary"
+            app:radius="@dimen/_4sdp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard"
+        android:layout_marginTop="-5dp"
+        android:layout_toEndOf="@id/rlMain"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/spacing_standard"
+            android:textAppearance="@style/FontSemiBold"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/font_size_medium" />
+
+        <TextView
+            android:id="@+id/tvText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/spacing_standard"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/font_size_small" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_content"
+        android:layout_marginTop="@dimen/spacing_control"
+        android:layout_marginStart="@dimen/spacing_middle"
+        android:layout_toEndOf="@id/rlMain"
+        android:textAppearance="@style/FontMedium"
+        android:textColor="@color/light_gray_date"
+        android:textSize="@dimen/font_size_small" />
+</RelativeLayout>

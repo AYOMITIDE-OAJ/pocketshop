@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/llMain"
+    android:background="@color/colorScreenBackground"
+    tools:context="com.oajstudios.pocketshop.activity.ChangePwdActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <EditText
+        android:id="@+id/edtOldPwd"
+        style="@style/EditTextStyle_rounded"
+        android:layout_marginTop="@dimen/spacing_standard_new"
+        android:hint="@string/hint_enter_old_password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edtNewPwd"
+        style="@style/EditTextStyle_rounded"
+        android:layout_marginTop="@dimen/spacing_standard_new"
+        android:autofillHints="@string/hint_new_password"
+        android:hint="@string/hint_new_password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edtConfirmPwd"
+        style="@style/EditTextStyle_rounded"
+        android:layout_marginTop="@dimen/spacing_standard_new"
+        android:autofillHints="@string/hint_new_password"
+        android:hint="@string/hint_confirm_password"
+        android:inputType="textPassword" />
+
+
+    <TextView
+        android:id="@+id/btnChangePassword"
+        style="@style/MaterialButton"
+        android:layout_marginStart="@dimen/spacing_standard_new"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginEnd="@dimen/spacing_standard_new"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:elevation="@dimen/spacing_standard_new"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/colorPrimary"
+        android:text="@string/lbl_change_now"
+        android:textAppearance="@style/FontSemiBold" />
+
+</LinearLayout>

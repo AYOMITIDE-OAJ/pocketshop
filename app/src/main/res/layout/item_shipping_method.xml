@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llShipping"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_standard">
+
+    <ImageView
+        android:id="@+id/imgDone"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@drawable/bg_ractangal"
+        android:padding="@dimen/spacing_control_half"
+        android:tint="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/shippingMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free Shipping"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/font_size_medium" />
+
+      <TextView
+          android:id="@+id/shippingCost"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="150"
+          android:textAppearance="@style/FontSemiBold"
+          android:textColor="@color/textColorSecondary"
+          android:textSize="@dimen/font_size_medium" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlNewest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard_new"
+        android:layout_marginTop="@dimen/spacing_middle"
+        android:layout_marginEnd="@dimen/spacing_standard_new">
+
+        <TextView
+            android:id="@+id/tvTitleBar"
+            style="@style/Heading"
+            android:text="@string/lbl_newest_product" />
+
+        <TextView
+            android:id="@+id/viewAllItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingStart="@dimen/spacing_control"
+            android:paddingTop="@dimen/spacing_control"
+            android:paddingEnd="@dimen/spacing_control_half"
+            android:paddingBottom="@dimen/spacing_control"
+            android:text="@string/lbl_view_all"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/font_size_small"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNewProduct"
+        style="@style/RecycleView"
+        android:layout_marginTop="@dimen/spacing_control"
+        android:paddingStart="@dimen/_10sdp" />
+
+</LinearLayout>

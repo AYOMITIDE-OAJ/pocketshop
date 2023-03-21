@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llDeal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dashboard_view"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_standard_new"
+        android:layout_marginTop="@dimen/spacing_standard_new"
+        android:layout_marginRight="@dimen/spacing_standard_new">
+
+        <TextView
+            android:id="@+id/tvTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lbl_deals_of_the_day"
+            android:textAppearance="@style/FontBold"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font_size_normal" />
+
+
+        <TextView
+            android:id="@+id/viewAllItem"
+            style="@style/MaterialButtonStyle.FilledLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/lbl_view_all"
+            android:textSize="@dimen/font_size_small"
+            app:cornerRadius="@dimen/spacing_standard" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard_new"
+        android:layout_marginTop="@dimen/spacing_standard_new"
+        android:layout_marginEnd="@dimen/spacing_standard_new"
+        android:layout_marginBottom="@dimen/spacing_middle"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/spacing_control">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNewProduct"
+            style="@style/RecycleView"
+            android:layout_marginTop="@dimen/spacing_standard"
+            android:layout_marginBottom="@dimen/spacing_standard_new"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="@dimen/spacing_standard"
+            android:paddingEnd="@dimen/spacing_standard" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="-30dp"
+        android:background="@color/colorScreenBackground"
+        android:orientation="vertical" />
+</LinearLayout>

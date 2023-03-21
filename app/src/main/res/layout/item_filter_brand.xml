@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvAttributesName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorFilter"
+        android:gravity="center|start"
+        android:paddingStart="@dimen/spacing_standard_new"
+        android:paddingEnd="@dimen/spacing_standard"
+        android:text="@string/lbl_attributes_name"
+        android:textColor="@color/common_white"
+        android:textSize="@dimen/font_size_normal"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/termsView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvAttributesName"
+        android:paddingStart="@dimen/spacing_standard_new"
+        android:paddingEnd="@dimen/spacing_standard">
+
+        <TextView
+            android:id="@+id/tvBrandName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/font_size_medium" />
+
+        <ImageView
+            android:id="@+id/ivSelect"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/spacing_control"
+            android:background="@drawable/bg_ractangal"
+            android:padding="@dimen/spacing_control_half" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/iBookDetail_llMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="6dp">
+
+    <RelativeLayout
+        android:id="@+id/r"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard"
+        android:layout_marginEnd="@dimen/spacing_standard"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="@dimen/_135sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:background="@drawable/bg_rounded_border_edittext"
+            android:backgroundTint="@color/demo_light_transparent" />
+
+        <View
+            android:id="@+id/book_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/spacing_standard"
+            android:layout_marginTop="@dimen/_145sdp"
+            android:layout_marginEnd="@dimen/spacing_standard"
+            android:background="@color/demo_light_transparent"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_below="@id/book_name"
+            android:layout_marginStart="@dimen/spacing_standard"
+            android:layout_marginTop="@dimen/spacing_control"
+            android:layout_marginEnd="@dimen/spacing_standard"
+            android:background="@color/demo_light_transparent" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

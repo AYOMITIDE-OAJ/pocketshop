@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorScreenBackground"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llNoItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgCart"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:contentDescription="@string/text_todo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_cart_empty" />
+
+        <TextView
+            android:id="@+id/lblNoItems"
+            style="@style/Heading"
+            android:text="@string/err_empty_cart"
+            android:textSize="@dimen/font_size_normal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShopNow"
+            style="@style/MaterialButtonStyle.Filled"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_standard_new"
+            android:text="@string/lbl_shop_now"
+            android:textSize="@dimen/font_size_small" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lay_button"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCart"
+                style="@style/RecycleView"
+                android:layout_marginBottom="@dimen/spacing_standard_new"
+                android:visibility="visible" />
+
+            <include
+                android:id="@+id/llPayment"
+                layout="@layout/layout_paymentdetail"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rlCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:layout_marginBottom="@dimen/spacing_standard_new"
+                android:background="@drawable/bg_square_dotted"
+                android:orientation="horizontal"
+                android:padding="@dimen/spacing_control"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtApplyCouponCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:layout_toStartOf="@+id/tvEditCoupon"
+                    android:text="@string/lbl_coupon_code" />
+
+                <TextView
+                    android:id="@+id/tvEditCoupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:padding="@dimen/spacing_standard"
+                    android:text="@string/lbl_apply"
+                    android:textColor="@color/PrimaryHeadingColor" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llShipping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:background="@drawable/bg_shadow"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_control"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblShipping"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/spacing_standard_new"
+                        android:layout_marginEnd="@dimen/spacing_standard_new"
+                        android:layout_toStartOf="@+id/tvChange"
+                        android:text="@string/lbl_Shipping"
+                        android:textAppearance="@style/FontMedium"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <TextView
+                        android:id="@+id/tvChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:padding="@dimen/spacing_standard"
+                        android:text="@string/lbl_change"
+                        android:textColor="@color/PrimaryHeadingColor" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/tvFreeShipping"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:text="Free Shipping"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/font_size_medium"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvShippingMethod"
+                    style="@style/RecycleView"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/spacing_standard_new"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingTop="@dimen/spacing_standard_new" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/lay_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_top_shadow"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_middle"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_control">
+
+            <TextView
+                android:id="@+id/lblSubTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_total_mrp"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMRPDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_control">
+
+            <TextView
+                android:id="@+id/lblDiscountTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_discount_on_mrp"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/tvDiscountMRPTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_control">
+
+            <TextView
+                android:id="@+id/txtDiscountlbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_coupon_discount"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llShippingAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_control"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtShippinglbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_Shipping"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/tvShipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="@dimen/font_size_medium"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/spacing_control"
+            android:layout_marginBottom="@dimen/spacing_control"
+            android:background="@color/view_color" />
+
+        <LinearLayout
+            android:id="@+id/llSeePriceDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_control">
+
+            <TextView
+                android:id="@+id/lblTotalAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lbl_total_amount_"
+                android:textAppearance="@style/FontSemiBold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/tvTotalCartAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/FontSemiBold"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/font_size_medium"
+                tools:ignore="MissingPrefix" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvContinue"
+            style="@style/MaterialButtonStyle.Filled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_control"
+            android:text="@string/lbl_checkout"
+            app:cornerRadius="@dimen/spacing_control" />
+    </LinearLayout>
+
+
+</RelativeLayout>
