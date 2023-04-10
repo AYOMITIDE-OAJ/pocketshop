@@ -3,7 +3,7 @@
 An E-commerce application store front for users to have a unique shopping experience
 
 <P align="center">
-  <img src="/aap/screenshot/pocketshop_home.png"/>
+  <img src="/app/screenshot/pocketshop_home.png"/>
 </p>
 
 
@@ -47,35 +47,35 @@ Go to the [Releases](https://github.com/AYOMITIDE-OAJ/pocketshop/releases) to do
 <table>
   <tr>
     <td>
-      <img src="https://github.com/AYOMITIDE-OAJ/androidvpn/blob/main/app/screenshot/Screenshot_20230321_143228.png" width="250" height="500"/>  
+      <img src="https://github.com/AYOMITIDE-OAJ/pocketshop/blob/main/app/screenshot/Screenshot_20230321_143228.png" width="250" height="500"/>  
     </td>
     <td>
-      <img src="https://github.com/AYOMITIDE-OAJ/androidvpn/blob/main/app/screenshot/Screenshot_20230321_143316.png" width="250" height="500"/>  
+      <img src="https://github.com/AYOMITIDE-OAJ/pocketshop/blob/main/app/screenshot/Screenshot_20230321_143316.png" width="250" height="500"/>  
     </td>
     <td>
-      <img src="https://github.com/AYOMITIDE-OAJ/androidvpn/blob/main/app/screenshot/Screenshot_20230321_143335.png" width="250" height="500"/>  
+      <img src="https://github.com/AYOMITIDE-OAJ/pocketshop/blob/main/app/screenshot/Screenshot_20230321_143335.png" width="250" height="500"/>  
     </td>
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/AYOMITIDE-OAJ/androidvpn/blob/main/app/screenshot/7.png" width="250" height="500"/>  
+      <img src="https://github.com/AYOMITIDE-OAJ/pocketshop/blob/main/app/screenshot/7.png" width="250" height="500"/>  
     </td>
      <td>
-      <img src="https://github.com/AYOMITIDE-OAJ/androidvpn/blob/main/app/screenshot/8.png" width="250" height="500"/>  
+      <img src="https://github.com/AYOMITIDE-OAJ/pocketshop/blob/main/app/screenshot/8.png" width="250" height="500"/>  
     </td>
     <td>
-      <img src="https://github.com/AYOMITIDE-OAJ/androidvpn/blob/main/app/screenshot/9.png" width="250" height="500"/>  
+      <img src="https://github.com/AYOMITIDE-OAJ/pocketshop/blob/main/app/screenshot/9.png" width="250" height="500"/>  
      </td> 
    </tr>
    <tr>
      <td>
-      <img src="https://github.com/AYOMITIDE-OAJ/androidvpn/blob/main/app/screenshot/Screenshot_1679413151.png" width="250" height="500"/>
+      <img src="https://github.com/AYOMITIDE-OAJ/pocketshop/blob/main/app/screenshot/Screenshot_1679413151.png" width="250" height="500"/>
     </td>
     <td>
-      <img src="https://github.com/AYOMITIDE-OAJ/androidvpn/blob/main/app/screenshot/Screenshot_1679413162.png" width="250" height="500"/>  
+      <img src="https://github.com/AYOMITIDE-OAJ/pocketshop/blob/main/app/screenshot/Screenshot_1679413162.png" width="250" height="500"/>  
      </td> 
       <td>
-      <img src="https://github.com/AYOMITIDE-OAJ/androidvpn/blob/main/app/screenshot/Screenshot_1679413199.png" width="250" height="500"/>  
+      <img src="https://github.com/AYOMITIDE-OAJ/pocketshop/blob/main/app/screenshot/Screenshot_1679413199.png" width="250" height="500"/>  
      </td> 
    </tr>
   
